@@ -12,6 +12,7 @@ export { default as DarkTheme } from './styles/DarkTheme';
 
 export { default as BottomNavigation } from './components/BottomNavigation';
 export { default as Button } from './components/Button';
+export { default as BaseButton } from './components/BaseButton';
 export { default as Card } from './components/Card/Card';
 export { default as CardActions } from './components/Card/CardActions';
 export { default as CardContent } from './components/Card/CardContent';
