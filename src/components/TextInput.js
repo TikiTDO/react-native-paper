@@ -310,11 +310,11 @@ const styles = StyleSheet.create({
   placeholder: {
     position: 'absolute',
     left: 0,
-    top: 38,
+    top: 28,
     fontSize: 16,
   },
   input: {
-    minHeight: 64,
+    minHeight: 50,
     paddingTop: 20,
     paddingBottom: 0,
     marginTop: 8,
