@@ -210,6 +210,8 @@ class TextInput extends React.Component<Props, State> {
       underlineColor,
       style,
       theme,
+      textInputStyle,
+      placeholderStyle,
       ...rest
     } = this.props;
     const { colors, fonts } = theme;
@@ -269,7 +271,7 @@ class TextInput extends React.Component<Props, State> {
       <View style={style}>
         <AnimatedText
           pointerEvents="none"
-          style={[styles.placeholder, labelStyle]}
+          style={[styles.placeholder, labelStyle, placeholderStyle]}
         >
           {label}
         </AnimatedText>
@@ -291,6 +293,7 @@ class TextInput extends React.Component<Props, State> {
               color: inputTextColor,
               fontFamily,
             },
+            textInputStyle
           ]}
         />
         <View pointerEvents="none" style={styles.bottomLineContainer}>
@@ -310,21 +313,21 @@ const styles = StyleSheet.create({
   placeholder: {
     position: 'absolute',
     left: 0,
-    top: 28,
+    top: 25,
     fontSize: 16,
   },
   input: {
     minHeight: 50,
-    paddingTop: 20,
+    marginTop: 10,
     paddingBottom: 0,
     marginTop: 8,
     marginBottom: -4,
   },
   multiline: {
-    paddingTop: 30,
+    marginTop: 20,
   },
   bottomLineContainer: {
-    marginBottom: 4,
+    // marginBottom: 4,
     height: StyleSheet.hairlineWidth * 4,
   },
   bottomLine: {
