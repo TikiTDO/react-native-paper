@@ -351,6 +351,8 @@ class TextInput extends React.Component<Props, State> {
       underlineColor,
       style,
       theme,
+      textInputStyle,
+      placeholderStyle,
       ...rest
     } = this.props;
 
@@ -415,7 +417,7 @@ class TextInput extends React.Component<Props, State> {
       <View style={style}>
         <AnimatedText
           pointerEvents="none"
-          style={[styles.placeholder, labelStyle]}
+          style={[styles.placeholder, labelStyle, placeholderStyle]}
         >
           {label}
         </AnimatedText>
@@ -444,6 +446,7 @@ class TextInput extends React.Component<Props, State> {
               color: inputTextColor,
               fontFamily,
             },
+            textInputStyle
           ]}
         />
         <View pointerEvents="none" style={styles.bottomLineContainer}>
