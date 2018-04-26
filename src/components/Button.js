@@ -157,6 +157,7 @@ class Button extends React.Component<Props, State> {
       <BaseButton
         {...this.props}
         backgroundColor={backgroundColor}
+        textColor={textColor}
         style={[
           styles.button,
           compact && styles.compact,

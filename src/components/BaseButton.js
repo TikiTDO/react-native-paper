@@ -112,10 +112,11 @@ class Button extends React.Component<Props, State> {
       style,
       theme,
       backgroundColor,
+      textColor
     } = this.props;
     const { colors, roundness } = theme;
 
-    let textColor, isDark;
+    let isDark;
 
     if (typeof dark === 'boolean') {
       isDark = dark;
@@ -124,26 +125,6 @@ class Button extends React.Component<Props, State> {
         backgroundColor === 'transparent'
           ? false
           : !color(backgroundColor).light();
-    }
-
-    if (disabled) {
-      textColor = theme.dark
-        ? color(white)
-            .alpha(0.3)
-            .rgb()
-            .string()
-        : color(black)
-            .alpha(0.26)
-            .rgb()
-            .string();
-    } else if (raised) {
-      textColor = isDark ? white : black;
-    } else if (backgroundColor) {
-      textColor = backgroundColor;
-    } else if (primary) {
-      textColor = colors.primary;
-    } else {
-      textColor = theme.dark ? white : black;
     }
 
     const rippleColor = color(textColor)
