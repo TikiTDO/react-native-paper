@@ -34,7 +34,6 @@
     "flow": "flow",
     "lint": "eslint .",
     "test": "jest",
-    "prepare": "node ./scripts/generate-mappings",
     "bootstrap": "yarn && yarn --cwd example && yarn --cwd docs"
   },
   "dependencies": {
